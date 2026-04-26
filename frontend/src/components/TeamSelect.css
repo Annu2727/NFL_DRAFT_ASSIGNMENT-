@@ -1,0 +1,221 @@
+.loading-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+}
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.team-select-page {
+  min-height: 100vh;
+  padding: 48px 32px;
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(232,197,71,0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 90%, rgba(74,158,255,0.04) 0%, transparent 50%);
+}
+
+.select-header {
+  max-width: 1100px;
+  margin: 0 auto 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.select-eyebrow {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.select-title {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6vw, 72px);
+  letter-spacing: 2px;
+  line-height: 0.95;
+  color: var(--text);
+}
+
+.select-sub {
+  margin-top: 12px;
+  color: var(--text-dim);
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.draft-meta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 28px;
+  flex-shrink: 0;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.meta-val {
+  font-family: var(--font-display);
+  font-size: 32px;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.meta-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+}
+
+.meta-divider {
+  width: 1px;
+  height: 32px;
+  background: var(--border);
+}
+
+.teams-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 16px;
+}
+
+.team-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+  animation: fadeUp 0.4s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--team-color);
+}
+
+.team-card-glow {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--team-color);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.team-card:hover .team-card-glow {
+  opacity: 1;
+}
+
+.team-pick-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.team-card-body {
+  padding: 24px 20px 16px;
+}
+
+.team-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.team-context {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  font-weight: 300;
+}
+
+.team-needs-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.needs-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 1.5px;
+  flex-shrink: 0;
+}
+
+.needs-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.need-chip {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  border: 1px solid currentColor;
+  opacity: 0.8;
+}
+
+.team-card-footer {
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.team-card:hover .team-card-footer {
+  color: var(--accent);
+}

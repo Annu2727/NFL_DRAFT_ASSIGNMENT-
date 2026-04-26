@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --bg: #0a0c10;
+  --surface: #12151c;
+  --surface2: #1a1e28;
+  --surface3: #222736;
+  --border: #2a2f3e;
+  --accent: #e8c547;
+  --accent2: #4a9eff;
+  --danger: #ff4757;
+  --success: #2ed573;
+  --text: #e8eaf0;
+  --text-dim: #7a8099;
+  --text-muted: #4a5168;
+  --font-display: 'Bebas Neue', cursive;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+
+.pos-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.pos-QB { background: #3d1a1a; color: #ff6b6b; border: 1px solid #ff4757; }
+.pos-WR { background: #1a2e3d; color: #74b9ff; border: 1px solid #4a9eff; }
+.pos-OT { background: #1a2d1a; color: #6bcb77; border: 1px solid #2ed573; }
+.pos-OG { background: #1a2d1a; color: #6bcb77; border: 1px solid #2ed573; }
+.pos-EDGE { background: #2d1a2d; color: #d4a8ff; border: 1px solid #a855f7; }
+.pos-DT { background: #2d1e1a; color: #ffa07a; border: 1px solid #ff7f50; }
+.pos-CB { background: #1a2a2d; color: #7fffff; border: 1px solid #00cec9; }
+.pos-S { background: #2d2a1a; color: #ffd97a; border: 1px solid #ffd700; }
+.pos-LB { background: #251a2d; color: #c8a4ff; border: 1px solid #9b59b6; }
+.pos-TE { background: #2d1a1d; color: #ff9eb5; border: 1px solid #e84393; }
+.pos-RB { background: #1d2a1a; color: #a8e063; border: 1px solid #6ab04c; }
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+}
