@@ -3,7 +3,7 @@
 A full-stack NFL Draft Simulator where you control one of 7 real NFL teams and AI controls the remaining 6. Built with React + FastAPI + Groq AI (LLaMA3).
 
 ## 🎥 Loom Walkthrough
-> https://www.loom.com/share/8244531c681843a8a31073b55ab62a02
+> https://www.loom.com/share/1cb3ff4c0b8b4d1c863566ae8df67fb4
 
 ---
 
